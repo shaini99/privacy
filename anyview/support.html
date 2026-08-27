@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anyview Support</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    max-width: 42rem; margin: 0 auto; padding: 2.5rem 1.25rem 5rem;
+    font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1c1c1e; background: #fff;
+    overflow-wrap: break-word;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e5e5e7; background: #1c1c1e; }
+    a { color: #6cb6ff; }
+    .lede { background: #2c2c2e; border-color: #3a3a3c; }
+    code { background: #2c2c2e; }
+  }
+  h1 { font-size: 1.6rem; margin: 0 0 .25rem; letter-spacing: -.02em; }
+  h2 { font-size: 1.1rem; margin: 2.25rem 0 .5rem; letter-spacing: -.01em; }
+  h3 { font-size: 1rem; margin: 1.5rem 0 .35rem; }
+  .updated { color: #6e6e73; font-size: .9rem; margin: 0 0 1.75rem; }
+  .lede {
+    margin: 0 0 1.5rem; padding: .9rem 1.1rem;
+    background: #f2f2f7; border: 1px solid #e3e3e8; border-radius: .6rem;
+    font-weight: 600;
+  }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.25rem; }
+  li { margin: 0 0 .35rem; }
+  a { color: #0066cc; }
+  code {
+    background: #f2f2f7; padding: .1rem .35rem; border-radius: .25rem;
+    font: .9em/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  footer { margin-top: 3rem; color: #6e6e73; font-size: .85rem; }
+</style>
+</head>
+<body>
+
+<h1>Anyview Support</h1>
+<p class="updated">Last updated: August 28, 2026</p>
+
+<p class="lede">Anyview reads comics and books that are already on your device. No account, no ads, no internet connection required.</p>
+
+<h2>Supported formats</h2>
+<ul>
+  <li><strong>Comics</strong> — <code>zip</code>, <code>cbz</code>, <code>cbr</code>, <code>rar</code></li>
+  <li><strong>Single images</strong> — <code>png</code>, <code>jpg</code>, <code>jpeg</code>, <code>gif</code>, <code>bmp</code>, <code>tif</code>, <code>tiff</code>, <code>webp</code>, <code>heic</code>, <code>heif</code></li>
+  <li><strong>Text</strong> — <code>txt</code>, <code>epub</code></li>
+  <li><strong>Documents</strong> — <code>pdf</code>, <code>hwp</code>, <code>hwpx</code></li>
+</ul>
+<p>Archives are read as they are. You do not need to unzip anything first.</p>
+
+<h2>Getting files into the app</h2>
+<h3>Wi-Fi Transfer</h3>
+<p>Open <strong>Wi-Fi Transfer</strong> in the app, then type the address it shows into a browser on your computer. Drag files onto the page. Your phone and computer must be on the same Wi-Fi network. The transfer server runs only while that screen is open and stops the moment you close it or the app goes to the background.</p>
+
+<h3>Other ways</h3>
+<ul>
+  <li>Open a file from the <strong>Files</strong> app</li>
+  <li>Use <strong>Share</strong> from another app and choose Anyview</li>
+  <li>Copy a file and paste it into the library</li>
+</ul>
+
+<h2>Common questions</h2>
+
+<h3>A comic will not open</h3>
+<p>An archive needs to contain at least one image. Archives protected with a password are not supported. If the file opens correctly on your computer but not here, please email it to us — or describe how it was made — and we will look into it.</p>
+
+<h3>A text file shows garbled characters</h3>
+<p>Anyview detects common encodings, including the Korean ones, and converts them for you. If a file still looks wrong, saving it as UTF-8 on your computer will fix it. Tell us about the file and we will try to add support for it.</p>
+
+<h3>The paragraphs run together</h3>
+<p>Some text files break every visual line instead of every paragraph. Turn on <strong>paragraph cleanup</strong> in the viewer settings and the text will reflow properly.</p>
+
+<h3>Where did my place in the book go</h3>
+<p>Anyview remembers where you stopped in every book and returns you there when you open it again. Positions are kept on your device only, so they do not follow you to another device.</p>
+
+<h3>Can I hide some folders</h3>
+<p>Yes. The hidden folder feature keeps chosen folders out of the library until you unlock them.</p>
+
+<h3>Can I use my own fonts</h3>
+<p>Yes. Add a font file the same way you add a book, and it appears in the font picker in the viewer.</p>
+
+<h3>Reading a manga right to left</h3>
+<p>Open the viewer settings and set the reading direction. You can also turn on two-page spreads, or split a wide double-page scan into two pages automatically.</p>
+
+<h2>Contact</h2>
+<p>Questions, bug reports, and requests are all welcome at
+<a href="mailto:akhyulnu@gmail.com">akhyulnu@gmail.com</a>.
+Please include your device model and iOS version — and, if a specific file is involved, how that file was created.</p>
+
+<footer>
+  <a href="./">Privacy Policy</a>
+</footer>
+
+</body>
+</html>
