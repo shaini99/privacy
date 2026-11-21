@@ -41,20 +41,23 @@
 <body>
 
 <h1>Anyview Support</h1>
-<p class="updated">Last updated: August 28, 2026</p>
+<p class="updated">Last updated: November 21, 2026</p>
 
-<p class="lede">Anyview reads comics and books that are already on your device. No account, no ads, no internet connection required.</p>
+<p class="lede">Anyview reads comics, books and documents — from your device, or straight from your own servers. No account, no ads, nothing collected.</p>
 
-<h2>Supported formats</h2>
+<p><a href="#formats">Formats</a> · <a href="#files">Adding files</a> · <a href="#servers">Book servers</a> · <a href="#reading">Reading</a> · <a href="#sync">Syncing your place</a> · <a href="#faq">Common questions</a> · <a href="#contact">Contact</a></p>
+
+<h2 id="formats">Supported formats</h2>
 <ul>
-  <li><strong>Comics</strong> — <code>zip</code>, <code>cbz</code>, <code>cbr</code>, <code>rar</code></li>
+  <li><strong>Comics</strong> — <code>zip</code>, <code>cbz</code>, <code>rar</code>, <code>cbr</code>, <code>7z</code>, <code>cb7</code>, <code>tar</code>, <code>cbt</code></li>
   <li><strong>Single images</strong> — <code>png</code>, <code>jpg</code>, <code>jpeg</code>, <code>gif</code>, <code>bmp</code>, <code>tif</code>, <code>tiff</code>, <code>webp</code>, <code>heic</code>, <code>heif</code></li>
-  <li><strong>Text</strong> — <code>txt</code>, <code>epub</code></li>
+  <li><strong>E-books</strong> — <code>epub</code>, <code>mobi</code>, <code>azw</code>, <code>azw3</code>, <code>prc</code>, <code>fb2</code></li>
+  <li><strong>Text and web pages</strong> — <code>txt</code>, <code>html</code>, <code>htm</code>, <code>xhtml</code></li>
   <li><strong>Documents</strong> — <code>pdf</code>, <code>hwp</code>, <code>hwpx</code></li>
 </ul>
 <p>Archives are read as they are. You do not need to unzip anything first.</p>
 
-<h2>Getting files into the app</h2>
+<h2 id="files">Getting files into the app</h2>
 <h3>Wi-Fi Transfer</h3>
 <p>Open <strong>Wi-Fi Transfer</strong> in the app, then type the address it shows into a browser on your computer. Drag files onto the page. Your phone and computer must be on the same Wi-Fi network. The transfer server runs only while that screen is open and stops the moment you close it or the app goes to the background.</p>
 
@@ -65,7 +68,31 @@
   <li>Copy a file and paste it into the library</li>
 </ul>
 
-<h2>Common questions</h2>
+<h2 id="servers">Book servers</h2>
+<p>Anyview can read straight from servers you run yourself — a NAS, a shared folder on your computer, or a book server such as Komga, Kavita or Calibre-Web. Tap <strong>+</strong> at the bottom left of the library, choose the kind of server, and enter its address. A username and password are optional.</p>
+<ul>
+  <li><strong>OPDS</strong> — the catalog address of your book server, e.g. <code>http://192.168.0.10:25600/opds/v1.2/catalog</code> for Komga or <code>http://192.168.0.10:8083/opds</code> for Calibre-Web. Kavita shows its OPDS address in your user settings.</li>
+  <li><strong>SMB</strong> — a shared folder, e.g. <code>smb://192.168.0.10/books</code>. On a Mac, turn on File Sharing in System Settings › General › Sharing.</li>
+  <li><strong>WebDAV</strong> — e.g. <code>http://nas.local:5005/books</code></li>
+  <li><strong>FTP</strong>, <strong>FTPS</strong>, <strong>SFTP</strong> — e.g. <code>ftp://192.168.0.10/books</code>, <code>ftps://nas.example.com/books</code>, <code>sftp://192.168.0.10/books</code></li>
+</ul>
+<p>Tap a book to read it right away without downloading it, or tap <strong>⬇</strong> to save it to your library. SMB, WebDAV, FTP, FTPS and SFTP can save a whole folder. In a server folder, tap <strong>⋯</strong> at the top right to sort by name, date modified or date read.</p>
+<p>The first time you connect to a server on your home network, iOS asks for <strong>Local Network</strong> access. Please allow it — without it Anyview cannot reach the server. You can change it later in Settings › Privacy &amp; Security › Local Network.</p>
+<p>Anyview connects only to the servers you add, directly from your device. Passwords are kept in the iOS Keychain.</p>
+
+<h2 id="reading">Reading</h2>
+<p>Tap the center of the page to show the controls, then tap <strong>⋯</strong> at the bottom right for the reading menu.</p>
+<ul>
+  <li><strong>Page Turn</strong> (in Themes &amp; Settings) — Page Curl, Slide, Instant or Continuous Scroll</li>
+  <li><strong>Read Aloud</strong> — reads text and e-books aloud, keeps going in the background or on the Lock Screen, with a sleep timer</li>
+  <li><strong>Reading Direction</strong>, <strong>Two-Page</strong> spreads and <strong>Split Pages</strong> for comics and manga</li>
+</ul>
+
+<h2 id="sync">Syncing your place</h2>
+<p>If you are signed in to iCloud, your place in each book follows you to your other iPhone, iPad and Mac with the same Apple Account. If you have read the book more recently on another device, Anyview asks whether to continue from there. A book you have not opened on this device yet simply opens at that place. Only reading positions are synced — never the files themselves — and they are stored in your own iCloud.</p>
+<p>The book has to be the same file on both devices. Paged views split pages to fit each screen, so on another device the same sentence may be a little further down the page rather than at the top.</p>
+
+<h2 id="faq">Common questions</h2>
 
 <h3>A comic will not open</h3>
 <p>An archive needs to contain at least one image. Archives protected with a password are not supported. If the file opens correctly on your computer but not here, please email it to us — or describe how it was made — and we will look into it.</p>
@@ -74,10 +101,10 @@
 <p>Anyview detects common encodings, including the Korean ones, and converts them for you. If a file still looks wrong, saving it as UTF-8 on your computer will fix it. Tell us about the file and we will try to add support for it.</p>
 
 <h3>The paragraphs run together</h3>
-<p>Some text files break every visual line instead of every paragraph. Turn on <strong>paragraph cleanup</strong> in the viewer settings and the text will reflow properly.</p>
+<p>Some text files break every visual line instead of every paragraph. Turn on <strong>Auto-Format Paragraphs</strong> in the viewer settings and the text will reflow properly.</p>
 
 <h3>Where did my place in the book go</h3>
-<p>Anyview remembers where you stopped in every book and returns you there when you open it again. Positions are kept on your device only, so they do not follow you to another device.</p>
+<p>Anyview remembers where you stopped in every book and returns you there when you open it again. With iCloud, it also follows you to your other devices — see <a href="#sync">Syncing your place</a>.</p>
 
 <h3>Can I hide some folders</h3>
 <p>Yes. The hidden folder feature keeps chosen folders out of the library until you unlock them.</p>
@@ -88,7 +115,7 @@
 <h3>Reading a manga right to left</h3>
 <p>Open the viewer settings and set the reading direction. You can also turn on two-page spreads, or split a wide double-page scan into two pages automatically.</p>
 
-<h2>Contact</h2>
+<h2 id="contact">Contact</h2>
 <p>Questions, bug reports, and requests are all welcome at
 <a href="mailto:akhyulnu@gmail.com">akhyulnu@gmail.com</a>.
 Please include your device model and iOS version — and, if a specific file is involved, how that file was created.</p>
